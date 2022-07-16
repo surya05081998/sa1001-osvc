@@ -120,19 +120,6 @@ output application/json
         </error-handler>
     </flow>
     <flow name="post:\organizations:application\json:sa1001-osvc-config">
-        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
-            <ee:message>
-                <ee:set-payload><![CDATA[%dw 2.0
-output application/json
----
-{
-  orgName: "Underwriters Laboratories",
-  sfdcId: 63857,
-  message: "Organization Created",
-  code: 277090163
-}]]></ee:set-payload>
-            </ee:message>
-        </ee:transform>
 		<flow-ref doc:name="calling postOrganization Flow" doc:id="6cd309ad-59dd-4d1c-b8e9-a385a00eb102" name="postOrganizationsSubFlow"/>
     </flow>
 </mule>
