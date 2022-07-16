@@ -1,0 +1,9 @@
+%dw 2.0
+
+type auto_034cc05d_ea10_40a8_8691_4de8cf499691_Input_Payload = {|
+  orgName: String, 
+  sfdcId: Number, 
+  message: String, 
+  code: Number
+|}
+

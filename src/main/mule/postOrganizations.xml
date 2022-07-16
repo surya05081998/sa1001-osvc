@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<sub-flow name="postOrganizationsSubFlow" doc:id="034cc05d-ea10-40a8-8691-4de8cf499691" >
+		<logger level="INFO" doc:name="Info:Post Organization Start Logger" doc:id="d4cb3fa1-1677-43d7-9d41-00bf91aa6d96" message="Post Organization flow started"/>
+		<http:request method="POST" doc:name="OSVC system calling " doc:id="4f340c1c-32a1-4aa9-8bc8-736a72576e4b" url="dev-osvc-ocloud.us.e2.cloudhub.io/api/osvc/v1.4/organization"/>
+		<logger level="INFO" doc:name="Info: Post Organizations End Logger" doc:id="ab56dacb-1732-42a3-9ba7-58bbe871b301" message="Post Organizations End Logger"/>
+	</sub-flow>
+</mule>
